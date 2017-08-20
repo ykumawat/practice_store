@@ -1,0 +1,14 @@
+<h1> Create a New Product </h1>
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %></br>
+  <%= f.label :price %>
+  <%= f.text_field :price %></br>
+</br></br>
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c|%>
+    <%= c.check_box %>
+    <%= c.label %>
+  <%end%>
+  </br>
+  <%= f.submit%>
+  <%end%>
