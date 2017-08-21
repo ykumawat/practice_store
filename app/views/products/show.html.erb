@@ -1,0 +1,8 @@
+<h2><%= @product.name %></h2>
+$<%= @product.price %>
+</br></br>
+<%= link_to "Edit this product", edit_product_path(@product) %>
+</br></br>
+<%= link_to "Delete this product", product_path(@product), method: 'DELETE' %>
+</br></br>
+<%= link_to "Back to products page", products_path %>
